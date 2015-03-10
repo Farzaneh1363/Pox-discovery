@@ -3,6 +3,18 @@
 #
 # This file is part of POX.
 #
+#
+## Modifications by Farzaneh Pakzad 
+## Date: 10/3/2015
+## Summary of modifications:
+## The key difference of this version to the original version is that
+## instead of sending a Packet_Out message with an LLDP packet for each port on each switch
+## we are only sending a single Packet_Out message, together with instructions to the 
+## switch to send it out on each port. To provide a unique source port identifier, the 
+## source MAC address is rewritten by the switch to match the MAC address of the egress port.
+##
+#
+#
 # POX is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
